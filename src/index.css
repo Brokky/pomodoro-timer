@@ -1,13 +1,121 @@
-body {
+:root {
+  font-size: 24px;
+}
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'VT323', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #373B44;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: radial-gradient(circle, #042A2B, #5EB1BF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  min-width: 40vw;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #54F2F2;
+
+  box-shadow: #40b5b5 1rem 1rem 1rem;
+}
+
+#options-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+#session-wrapper,
+#break-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#session-label,
+#break-label,
+#timer-label {
+  font-size: 1.2rem;
+}
+
+#session-buttons,
+#break-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#session-buttons>button,
+#break-buttons>button {
+  background-color: #FCFCFC;
+  width: 1rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #FCFCFC;
+}
+
+#time-left {
+  font-size: 2.5rem;
+}
+
+#buttons-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+#buttons-wrapper>button {
+  background-color: #FCFCFC;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 0.3rem;
 }
